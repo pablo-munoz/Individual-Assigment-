@@ -221,9 +221,9 @@ if df is not None:
                         st.pyplot(fig_imp)
 
                     else:
-                        # Regression metrics: R sqaured and RMSE
+                        # Regression metrics: R squared and RMSE
                         r2_val = r2_score(y_test, y_pred)
-                        rmse_val = mean_squared_error(y_test, y_pred, squared=False)
+                        rmse_val = np.sqrt(mean_squared_error(y_test, y_pred))
                         st.write(f"**R² (Coefficient of Determination):** {r2_val:.3f}")
                         st.write(f"**RMSE (Root Mean Squared Error):** {rmse_val:.3f}")
 
